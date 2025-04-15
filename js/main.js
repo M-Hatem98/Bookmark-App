@@ -30,21 +30,29 @@ function addBookmark() {
     return;
   }
   if (!isValidName(name)) {
+    siteName.classList.add("is-invalid")
     Swal.fire({
       icon: "error",
       title: "Name is not valid",
       text: "Name Must be at least 3 characters long",
     });
     return;
+  }else {
+    siteName.classList.remove("is-invalid")
+    siteName.classList.add("is-valid")
   }
 
   if (!isValidUrl(url)) {
+    siteURL.classList.add("is-invalid")
     Swal.fire({
       icon: "error",
       title: "Url is not valid",
       text: "Site URL must be a valid one e.g., https://google.com",
     });
     return;
+  }else {
+    siteURL.classList.remove("is-invalid")
+    siteURL.classList.add("is-valid")
   }
   const bookmark = { id, name, url };
 
