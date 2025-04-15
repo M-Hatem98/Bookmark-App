@@ -1,0 +1,116 @@
+::selection {
+    background: #009cad;
+    color: #fff;
+}
+
+body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #EAF4FF;
+}
+
+h1,
+.app-title {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 3.5rem;
+    position: relative;
+    isolation: isolate;
+}
+
+h1::before {
+    content: '';
+    background-color: #79C3E0;
+    position: absolute;
+    left: calc(50% - 150px);
+    bottom: 3px;
+    width: 300px;
+    height: 8px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+h1:hover::before {
+    height: 100%;
+    bottom: 0;
+    z-index: -1;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #009cad, #004e89);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bookmark-app {
+    background: #EAF4FF;
+    min-height: 100vh;
+}
+
+.card {
+    background: #ffffff4a;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #ee592b;
+    border-color: #ee592b;
+}
+
+.btn-primary:hover {
+    background-color: #ef6b43;
+    border-color: #ef6b43;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #ffffff4a;
+    color: #000;
+}
+
+
+.swal2-confirm.swal2-styled {
+    background-color: #009cad !important;
+    border-color: #009cad !important;
+    color: #fff !important;
+}
+
+/* Responsive */
+
+@media (max-width: 576px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h1::before {
+        width: 170px;
+        left: calc(50% - 85px);
+    }
+  
+    .app-title {
+      font-size: 1.8rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  
+    .container {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
